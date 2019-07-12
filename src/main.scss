@@ -1,0 +1,18 @@
+@import "utils/styles/base/variables";
+@import "utils/styles/base/include-media";
+@import "utils/styles/base/mixins";
+
+@import "utils/styles/vendors/normalize";
+@import "utils/styles/vendors/breakpoints";
+@import "utils/styles/vendors/typography";
+
+html {
+  line-height: 2;
+  font-size: 20px;
+}
+
+body {
+  font-family: roboto,Arial,sans-serif;
+  min-width: 320px;
+  color: #434c6d;
+}
