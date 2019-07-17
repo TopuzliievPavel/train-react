@@ -1,3 +1,3 @@
-import About from "./about";
+import MainAbout from "./page-about";
 
-export default About;
+export default MainAbout;

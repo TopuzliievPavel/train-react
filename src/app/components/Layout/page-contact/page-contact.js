@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export default class MainContact extends Component {
+export default class PageContact extends Component {
   render() {
     return (
       <section className="contact">

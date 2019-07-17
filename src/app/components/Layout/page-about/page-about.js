@@ -5,7 +5,7 @@ import video from "../../../../utils/img/service03.png";
 import animate from "../../../../utils/img/service04.png";
 
 
-const MainAbout = () => {
+const PageAbout = () => {
   return (
     <section className="about">
       <div className="container">
@@ -76,5 +76,5 @@ const MainAbout = () => {
   );
 };
 
-export default MainAbout;
+export default PageAbout;
 

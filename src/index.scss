@@ -1,20 +1,33 @@
 @import "utils/styles/base/variables";
-@import "utils/styles/base/include-media";
 @import "utils/styles/base/mixins";
+@import "utils/styles/base/include-media";
 
 @import "utils/styles/vendors/normalize";
 @import "utils/styles/vendors/breakpoints";
 @import "utils/styles/vendors/typography";
 
+@import "app/components/Layout/header/header";
+@import "app/components/Layout/footer/footer";
+@import "app/components/Layout/page-about/page-about";
+@import "app/components/Layout/page-contact/page-contact";
+
+@import "app/routes/Content/content";
+//@import "app/components/Layout/visual/visual";
+
+
 html {
   line-height: 2;
   font-size: 20px;
+  height: 100%;
 }
 
 body {
-  font-family: "robotoRegular", Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
   min-width: 320px;
   color: $primary;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .container {

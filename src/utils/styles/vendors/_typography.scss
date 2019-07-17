@@ -15,7 +15,7 @@ h4, .h4,
 h5, .h5,
 h6, .h6,
 .h {
-  font-family: $font-Knewave;
+  font-family: 'Knewave', cursive;;
   font-weight: bold;
   text-transform: uppercase;
   line-height: 1.3;
@@ -24,27 +24,27 @@ h6, .h6,
 
 h1 {
   font-size: $h1-basic-font-size;
-  color: $info;
+  color: #f8e81c;
 }
 
 h2 {
   font-size: $h2-basic-font-size;
-  color: $accent;
+  color: #50e3c2;
 }
 
 h3 {
   font-size: $h3-basic-font-size;
-  color: $base-color;
+  color: #fff;
 }
 
 h4 {
   font-size: $h4-basic-font-size;
-  color: $accent;
+  color: #50e3c2;
 }
 
 h5 {
   font-size: $h5-basic-font-size;
-  color: $base-color;
+  color: #fff;
 }
 
 h6 {
@@ -53,7 +53,7 @@ h6 {
 
 .h1 {
   font-size: $h1-basic-font-size;
-  color: $primary;
+  color: #434c6d;
 }
 
 .h2 {
@@ -81,12 +81,12 @@ p {
 }
 
 a {
-  color: $base-link-color;
+  color: #f8e81c;
 }
 
 cite {
-  font-size: $size-xxs;
-  font-family: "robotoBold", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
   font-style: normal;
-  color: $info;
+  color: #f8e81c;
 }
