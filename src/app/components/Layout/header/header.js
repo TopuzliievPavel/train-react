@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { MenuItem } from "./MenuItem";
-import './styles.scss'
+import './app-header.scss'
 import logo from '../../../../utils/img/logo.png';
 
 const links = [
@@ -10,10 +10,10 @@ const links = [
   'Contact us'
 ];
 
-export class Header extends React.Component {
+export default class AppHeader extends Component {
  render() {
    return (
-     <div className="header">
+     <header className="header">
        <div className="navigation-menu">
          <button className="menu-open">
            <span></span>
@@ -33,7 +33,7 @@ export class Header extends React.Component {
            <img src={logo} alt="SSAGroup"/>
          </a>
        </div>
-     </div>
+     </header>
    );
  }
 }

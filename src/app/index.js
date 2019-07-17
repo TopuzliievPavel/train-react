@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
-import './styles.scss';
-import { Header } from './components/Layout/Header';
+import './app.scss';
+import { Layout } from "./components/Layout/layout";
+
 
 export class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
+        <Layout>
+          <Main />
+        <Layout />
       </div>
     );
   }
