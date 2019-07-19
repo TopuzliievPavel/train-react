@@ -7,16 +7,8 @@ export default class IndexContact extends Component {
 
   state = {
     todoData: [
-      { label: "Drink coffee", id: 1},
-      { label: "Make app", id: 2},
-      { label: "Test", id: 3}
+      { label: null, id: 1}
     ]
-  };
-
-  createTodoItem(label) {
-    return {
-      label
-    }
   };
 
   addItem = (text) => {
@@ -50,6 +42,7 @@ export default class IndexContact extends Component {
             </h6>
             <ItemAddForm name="index-form" className="index-form"
                         onItemAdded={this.addItem} />
+
           </div>
 
           <div className="index-contact-box index-contact_modify">
@@ -57,7 +50,7 @@ export default class IndexContact extends Component {
               <h6 className="box-community__title">Community</h6>
               <ul className="box-community__list">
                 <li className="box-community__item">
-                  <a href="/" className="box-community__link">Link 1</a>
+                  <a href="/" className="box-community__link">Link</a>
                 </li>
                 <li className="box-community__item">
                   <a href="/" className="box-community__link">Link 2</a>
@@ -69,6 +62,15 @@ export default class IndexContact extends Component {
                 <li className="box-community__item">
                   <a href="/" className="box-community__link">Somelonglonglink 4</a>
                 </li>
+                {
+                  this.state.todoData.map(item => {
+                    return <li key={item.id} className="box-community__item">
+                      <a href="/" className="box-community__link">
+                        {item.label}
+                      </a>
+                    </li>
+                  })
+                }
               </ul>
             </div>
 

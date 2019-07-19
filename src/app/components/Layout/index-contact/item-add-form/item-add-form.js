@@ -5,7 +5,7 @@ export default class ItemAddForm extends Component {
     label: ""
   };
 
-  onLabelChange = (e) => {
+  onChange = (e) => {
     this.setState({
       label: e.target.value
     });
@@ -13,7 +13,7 @@ export default class ItemAddForm extends Component {
 
   onBtnClick = (e) => {
     e.preventDefault();
-    // alert(this.state.inputValue);
+    console.log(this.state.label);
     this.props.onItemAdded(this.state.label);
     this.setState({
       label: ""
@@ -29,13 +29,13 @@ export default class ItemAddForm extends Component {
         <input type="text"
                className="form__input"
                value={this.state.label}
-               onChange={this.onLabelChange}
+               onChange={this.onChange}
                placeholder="Some text"/>
         <input type="submit"
                className="btn btn_active form__btn"
                value="Send"
-               onClick={() => this.props.onItemAdded("hello world")}
                />
+
       </form>
     );
   };
