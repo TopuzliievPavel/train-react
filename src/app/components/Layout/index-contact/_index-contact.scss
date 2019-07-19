@@ -1,0 +1,162 @@
+// ------------------ page-contact ----------------
+.index-contact {
+  background-color: $success;
+  padding: 30px 0 50px;
+}
+
+.index-contact-wrap {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.index-contact-box {
+  margin-bottom: 30px;
+  width: 100%;
+
+  @media screen and (min-width: 992px) {
+    width: 50%;
+    margin-bottom: 0;
+  }
+}
+
+.index-contact_modify {
+  margin-bottom: 0;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.index-contact-box__title,
+.box-community__title,
+.box-address__title {
+  font-size: 16px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+  }
+}
+
+.box-community {
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+  }
+}
+
+.box-address__list,
+.box-address__description {
+  margin: 0;
+}
+
+.box-community__item {
+  position: relative;
+  font-size: 16px;
+}
+
+.box-community__link {
+  padding-left: 20px;
+  transition: color .3s;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    border-top: 4px solid transparent;
+    border-left: 6px solid $primary;
+    border-bottom: 4px solid transparent;
+
+    transition: border-left-color .3s;
+  }
+  &:hover:before,
+  &:focus:before {
+    border-left-color: $info;
+  }
+}
+
+.box-address__term {
+  text-transform: capitalize;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+
+.box-community__link,
+.box-address__link {
+  transition: color .3s;
+  color: $primary;
+
+  &:hover,
+  &:focus {
+    color: $info;
+  }
+}
+
+.box-address__list {
+  font-size: 16px;
+}
+
+input.form-control,
+.page-contact-box__title,
+.box-address__term,
+.box-community__item,
+.box-community__title,
+.box-address__title,
+.box-address__description {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.box-community,
+.box-address {
+  width: 30%;
+}
+
+//Forms
+.index-form {
+  display: flex;
+}
+
+input.form__input {
+  flex: 1 0 auto;
+  padding: .4rem .8rem;
+
+  background: transparent;
+  border: solid 2px currentColor;
+  border-right: transparent;
+  font-size: 14px;
+
+  border-radius: 5px 0 0 5px;
+
+  &::placeholder {
+    color: $primary;
+  }
+
+  &:focus {
+    &::placeholder {
+      color: transparent;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 24px;
+  }
+}
+
+input.form__btn {
+  flex: 0 0 auto;
+  border-radius: 0 5px 5px 0;
+
+  @media screen and (min-width: 768px) {
+    font-size: 26px;
+    margin: 0;
+  }
+}
+
