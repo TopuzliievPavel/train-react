@@ -15,7 +15,7 @@ export class Content extends Component {
               quam</p>
 
             <figure className="software__figure">
-              <img src={trainImg} alt="Funny train" />
+              <img src={ trainImg } alt="Funny train" />
                 <figcaption>Tussencop</figcaption>
             </figure>
 

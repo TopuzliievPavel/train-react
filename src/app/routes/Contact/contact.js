@@ -1,11 +1,39 @@
 import React, { Component } from "react";
+// import Iframe from "react-iframe";
 
 export class Contact extends Component {
   render() {
     return (
-      <main className="container">
-        <h2>Contact</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet animi aut beatae, commodi culpa cumque delectus deserunt distinctio ducimus eius eligendi eos esse et eum harum id inventore itaque labore magni nemo non nulla perferendis possimus quisquam quo recusandae reiciendis repellat sunt tempore temporibus totam unde velit veniam! At atque dicta et eum odio, repellat sint! A aperiam cumque, deleniti dolor excepturi fugiat libero magnam nesciunt nulla numquam quam quos saepe sed temporibus voluptate. Aliquam aliquid enim hic nobis voluptate! Alias aliquam asperiores aut commodi, cum eligendi, ex expedita fuga impedit inventore maiores minima nihil officia perferendis perspiciatis possimus, quo reprehenderit tempore? Alias aut ea expedita iure laudantium minima numquam officiis praesentium sequi. Consectetur cumque ea eligendi eos eveniet, fugiat ipsam optio quas qui unde. A aperiam at beatae, culpa dolore eaque explicabo incidunt officia quia, quos reprehenderit repudiandae sed, sunt. Adipisci amet aspernatur commodi consectetur deserunt eius, ipsam laboriosam natus neque nesciunt non similique temporibus! Explicabo fuga id nulla officiis porro, quia repellendus repudiandae sequi? Amet dignissimos dolorum enim eum qui reiciendis repellat voluptas! Ad est in molestias nam perferendis quae, quibusdam tempora voluptate voluptatibus! A aliquid enim ipsa, labore magni minus non numquam odit officia, omnis quaerat qui quibusdam quos sint velit. A accusantium aliquid amet distinctio doloribus ea explicabo iure molestias natus voluptates? Dignissimos dolor error libero maxime nisi. Amet architecto atque beatae dignissimos ducimus eligendi enim, facilis impedit incidunt, ipsa maxime nam quae quisquam rerum similique, tempora voluptas. Ducimus facilis ipsam molestiae necessitatibus possimus. Cumque harum hic nesciunt! Accusantium adipisci consequatur, deserunt dolor doloremque enim et excepturi incidunt inventore iusto laboriosam nesciunt numquam perspiciatis praesentium quis, quisquam suscipit tempore. A accusamus aliquid consequatur delectus deleniti ea eum expedita laborum magni maiores nam nesciunt nobis non obcaecati perferendis, perspiciatis porro provident quas quis saepe similique sit tempora ut velit vero vitae voluptate. Accusantium, aspernatur blanditiis commodi cum delectus iusto laudantium minima molestiae mollitia nobis, non possimus tempora voluptas voluptate voluptates voluptatibus voluptatum? Accusantium asperiores enim molestias nesciunt. Accusantium aspernatur at consequatur debitis eligendi error fugit hic illum inventore iste iure laboriosam laborum, laudantium maiores minima modi molestiae molestias necessitatibus odio omnis quisquam repudiandae tempore tenetur, totam voluptatum? Aliquid blanditiis, distinctio ducimus eius eligendi error illo inventore ipsum voluptates. A beatae dignissimos, nesciunt odio quas recusandae ullam. Accusantium amet asperiores corporis deserunt dolore dolorum ducimus eaque et exercitationem harum hic id ipsam labore, laboriosam mollitia numquam obcaecati odit optio pariatur perspiciatis placeat provident repellat sunt tempore temporibus tenetur velit vero vitae voluptas voluptates. Accusamus aliquam aut possimus. Ad alias aliquam animi blanditiis commodi consequuntur dicta dignissimos dolore dolorem dolorum ea earum eius esse eveniet exercitationem explicabo fugiat fugit, in incidunt inventore ipsam labore libero magni minima minus nemo neque nostrum odit officia porro quae quia quibusdam quisquam quos sequi suscipit voluptatibus. Architecto debitis enim modi nobis sed, sit sunt. Corporis, cum deserunt dicta exercitationem facilis harum iure iusto maiores modi nostrum omnis perferendis sequi, veritatis voluptate voluptatum! Animi at deserunt eos laborum nam praesentium temporibus vitae voluptatibus voluptatum.</p>
+      <main className="contact-main">
+        <div className="container contact-wrap">
+          <h2 className="contact__title">Contact</h2>
+          <p>Thank you for your interest in Awesome Motive Inc.</p>
+          <p>If you’re looking for technical support, have a billing question or complaint, then please use the contact form on the specific product.</p>
+          <p>If you’re looking for a strategic partnership with one of our properties, then please use the dedicated form on the specific product website.</p>
+          <p>If none of the above apply to you, then go ahead and use the contact form below. Someone will be in touch within a week.</p>
+          <form className="contact-form" action="/">
+            <div className="form-group">
+              <label htmlFor="exampleInputEmail">Your name <span className="contact-star">*</span></label>
+              <input type="email" className="form-control" id="exampleInputEmail" aria-describedby="emailHelp"/>
+            </div>
+            <div className="form-group">
+              <label htmlFor="exampleInputPassword">Your email <span className="contact-star">*</span></label>
+              <input type="password" className="form-control" id="exampleInputPassword" />
+            </div>
+            <div className="form-group">
+              <label htmlFor="exampleInputText">What are you thinking <span className="contact-star">*</span></label>
+              <input type="text" className="form-control" id="exampleInputText" />
+            </div>
+            <div className="form-group form-check">
+              <label className="form-check-label" htmlFor="textarea">Detailed message <span className="contact-star">*</span></label>
+              <textarea name="textarea" id="textarea" cols="30" rows="4" className="form-control"/>
+            </div>
+            <button type="submit" className="btn btn_theme_primary">Submit</button>
+          </form>
+          {/*<Iframe*/}
+          {/*   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27949.364972993248!2d-74.05197138619836!3d40.72022589174986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2z0J3RjNGOLdCZ0L7RgNC6LCDQodCo0JA!5e0!3m2!1sru!2sua!4v1563380171781!5m2!1sru!2sua"*/}
+          {/*   width="600" height="450" frameBorder="0" />*/}
+        </div>
       </main>
     );
   };

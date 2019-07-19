@@ -28,8 +28,18 @@ h1 {
 }
 
 h2 {
-  font-size: $h2-basic-font-size;
+  font-size: 30px;
   color: #50e3c2;
+
+  @include media(">=tablet") {
+    font-size: 36px;
+  }
+  @include media(">=desktop") {
+    font-size: 48px;
+  }
+  @include media(">=widescreen") {
+    font-size: $h2-basic-font-size;
+  }
 }
 
 h3 {

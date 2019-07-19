@@ -11,26 +11,37 @@ import logo from '../../../../utils/img/logo.png';
 // ];
 
 
+const toggle = () => {
+  let burger = document.querySelector(".menu-open");
+  burger.classList.toggle("active");
+  let menu = document.querySelector(".menu");
+  menu.classList.toggle("show")
+};
+
+
 export default class Header extends Component {
 
+  // state = {
+  //   isOpen: false
+  // };
+
+  //
+  // toggleClickHandler = () => {
+  //   this.setState((prevState) => {
+  //     return {isMenuOpen: !prevState.isMenuOpen};
+  //   })
+  // };
+
  render() {
+
+   // const { isMenuOpen } = this.state;
+
    return (
      <header className="header">
-       <div className="navigation-menu" >
 
-         <button className="menu-open">
-           <span/>
+         <button className="menu-open" onClick={toggle}>
+           <span />
          </button>
-
-         {/*<ul className="menu">*/}
-         {/*  {links.map(item => (*/}
-         {/*    <MenuItem key={item.title} title={item.title} className="menu__item">*/}
-         {/*      <Link to={item.url}>*/}
-         {/*        {item.title}*/}
-         {/*      </Link>*/}
-         {/*    </MenuItem>*/}
-         {/*  ))}*/}
-         {/*</ul>*/}
 
          <ul className="menu">
            <li className="menu__item">
@@ -55,11 +66,10 @@ export default class Header extends Component {
            </li>
          </ul>
 
-       </div>
+         <Link to='/' className="logo">
+           <img src={logo} alt='SSAGroup' />
+         </Link>
 
-       <Link to='/' className="logo">
-         <img src={logo} alt='SSAGroup' />
-       </Link>
      </header>
    );
  }

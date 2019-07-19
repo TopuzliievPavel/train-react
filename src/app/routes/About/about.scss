@@ -1,0 +1,154 @@
+.about-story,
+.about-description {
+  margin-bottom: 30px;
+}
+
+.about__title {
+  text-align: center;
+  color: $primary;
+}
+
+.company-time {
+  text-align: center;
+  color: #4780ed;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.timeline__description {
+  position: relative;
+  bottom: 0;
+  width: 245px;
+  padding: 45px 15px;
+  line-height: 1.3;
+  transform: translateY(-50%);
+  font-size: 14px;
+  left: -310px;
+}
+
+.timeline__title {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.timeline__time {
+  display: block;
+  font-size: 20px;
+  line-height: 1;
+  color: #c8cce7;
+}
+
+.timeline__time,
+.timeline__title {
+  text-align: left;
+
+  @include media(">=tablet") {
+    text-align: right;
+  }
+}
+
+.timeline__row {
+
+  &:last-child {
+    .timeline__item {
+
+      @include media(">=tablet") {
+        padding: 0 30px 20px;
+      }
+
+      @include media(">=desktop") {
+        padding: 0 60px 20px;
+      }
+
+      @include media(">=widescreen") {
+        padding: 0 90px 20px;
+      }
+
+      &:before {
+        background: linear-gradient(180deg, #dfe2f7, #ffffff);
+      }
+    }
+  }
+
+  &:nth-child(even) {
+    text-align: left;
+
+    @include media(">=tablet") {
+      text-align: right;
+    }
+
+    .timeline__item {
+      &:after,
+      &:before {
+        left: 5px;
+        @include media(">=tablet") {
+          left: 0;
+        }
+      }
+    }
+
+    .timeline__time,
+    .timeline__title,
+    .timeline__item {
+      text-align: left;
+    }
+  }
+}
+
+
+.timeline__item {
+  width: 100%;
+  padding: 0 30px 20px;
+  font-size: 16px;
+  position: relative;
+  z-index: 9;
+
+  &:before {
+    content: "";
+    left: 5px;
+    position: absolute;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    transform: translateX(-50%);
+    background-color: #dfe2f7;
+
+    @include media(">=tablet") {
+      left: 100%;
+    }
+  }
+
+  @include media(">=tablet") {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 30px;
+    text-align: right;
+  }
+
+  @include media(">=desktop") {
+    padding: 0 60px;
+  }
+
+  @include media(">=widescreen") {
+    padding: 0 90px;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 0;
+    transform: translateX(-50%);
+    width: 16px;
+    height: 16px;
+    background: $base-color;
+    border-radius: 50%;
+    border: 2px solid #3870df;
+
+    @include media(">=tablet") {
+      left: 100%;
+    }
+  }
+}

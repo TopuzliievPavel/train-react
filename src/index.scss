@@ -8,10 +8,12 @@
 
 @import "app/components/Layout/header/header";
 @import "app/components/Layout/footer/footer";
-@import "app/components/Layout/page-about/page-about";
-@import "app/components/Layout/page-contact/page-contact";
+@import "app/components/Layout/index-about/index-about";
+@import "app/components/Layout/index-contact/index-contact";
 
 @import "app/routes/Content/content";
+@import "app/routes/Contact/contact";
+@import "app/routes/About/about";
 //@import "app/components/Layout/visual/visual";
 
 
