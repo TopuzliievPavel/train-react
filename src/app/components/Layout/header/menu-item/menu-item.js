@@ -1,22 +1,15 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-
-export class MenuItem extends React.Component {
+export default class MenuItem extends Component {
   render() {
+
+    const { label, link } = this.props;
+
     return (
-      <li className={this.props.className}>
-        <Link to={this.props.target} className="menu__link">
-          {this.props.title}
-        </Link>
-      </li>
+      <Link to={link} className="menu__link">
+        {label}
+      </Link>
     );
   };
 }
-
-MenuItem.propTypes = {
-  target: PropTypes.string,
-  title: PropTypes.string,
-  className: PropTypes.string
-};

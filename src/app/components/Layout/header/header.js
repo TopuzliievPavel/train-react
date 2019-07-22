@@ -1,15 +1,7 @@
 import React, { Component } from 'react';
-// import { MenuItem } from "./menu-item/menu-item";
+import { MenuList } from "./menu-list/menu-list";
 import { Link } from 'react-router-dom';
 import logo from '../../../../utils/img/logo.png';
-
-// const links = [
-//   { title: "Content", url: "/Content" },
-//   { title: "Other-link link", url: "/Other-link" },
-//   { title: "About us", url: "/About" },
-//   { title: "Contact", url: "/Contact" }
-// ];
-
 
 const toggle = () => {
   let burger = document.querySelector(".menu-open");
@@ -18,59 +10,29 @@ const toggle = () => {
   menu.classList.toggle("show")
 };
 
+const menu = [
+  { label: "Content", link: "/Content", id: 1 },
+  { label: "Other Link", link: "/Other", id: 2 },
+  { label: "About us", link: "/About", id: 3 },
+  { label: "Contact", link: "/Contact", id: 4 }
+];
 
 export default class Header extends Component {
+   render() {
+     return (
+       <header className="header">
 
-  // state = {
-  //   isOpen: false
-  // };
+           <button className="menu-open" onClick={toggle}>
+             <span />
+           </button>
 
-  //
-  // toggleClickHandler = () => {
-  //   this.setState((prevState) => {
-  //     return {isMenuOpen: !prevState.isMenuOpen};
-  //   })
-  // };
+           <MenuList className="menu" menu={menu} />
 
- render() {
+           <Link to='/' className="logo">
+             <img src={logo} alt='SSAGroup'/>
+           </Link>
 
-   // const { isMenuOpen } = this.state;
-
-   return (
-     <header className="header">
-
-         <button className="menu-open" onClick={toggle}>
-           <span />
-         </button>
-
-         <ul className="menu">
-           <li className="menu__item">
-             <Link to="/Content" className="menu__link">
-               Content
-             </Link>
-           </li>
-           <li className="menu__item">
-             <Link to="/Other" className="menu__link">
-               Other Link
-             </Link>
-           </li>
-           <li className="menu__item">
-             <Link to="/About" className="menu__link">
-               About Us
-             </Link>
-           </li>
-           <li className="menu__item">
-             <Link to="/Contact" className="menu__link">
-               Contact
-             </Link>
-           </li>
-         </ul>
-
-         <Link to='/' className="logo">
-           <img src={logo} alt='SSAGroup' />
-         </Link>
-
-     </header>
-   );
- }
+       </header>
+     );
+   }
 }

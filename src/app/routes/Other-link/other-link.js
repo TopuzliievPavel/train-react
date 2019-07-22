@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 
-
 export class OtherLink extends Component {
   render() {
     return (

@@ -53,12 +53,12 @@
   margin: 0;
 }
 
-.box-community__item {
+.list-group__item {
   position: relative;
   font-size: 16px;
 }
 
-.box-community__link {
+.list-group__link {
   padding-left: 20px;
   transition: color .3s;
 
@@ -86,7 +86,7 @@
   font-weight: 700;
 }
 
-.box-community__link,
+.list-group__link,
 .box-address__link {
   transition: color .3s;
   color: $primary;
@@ -104,7 +104,7 @@
 input.form-control,
 .page-contact-box__title,
 .box-address__term,
-.box-community__item,
+.list-group__item,
 .box-community__title,
 .box-address__title,
 .box-address__description {
